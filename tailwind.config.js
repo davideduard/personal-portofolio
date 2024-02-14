@@ -42,7 +42,8 @@ module.exports = {
         typing: "typing 6s steps(100, end) infinite alternate, blink .7s step-end infinite "
       },
       fontFamily: {
-        telegraf: ["PPTelegraf", "sans-serif"]
+        telegraf: ["PPTelegraf", "sans-serif"],
+        breathing: ["Breathing", "sans-serif"]
       }
     },
   },
