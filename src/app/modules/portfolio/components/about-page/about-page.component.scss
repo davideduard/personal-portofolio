@@ -1,0 +1,29 @@
+.description-container {
+  @apply absolute bottom-0 mb-12 text-xl font-telegraf w-[20vw]
+}
+
+.title {
+  @apply text-7xl font-telegraf opacity-0;
+  animation: fade 0.5s ease-in forwards;
+  animation-delay: 3.4s;
+  cursor: default;
+  user-select: none;
+}
+
+.subtitle {
+  @apply text-xl font-telegraf pl-1
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
