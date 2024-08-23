@@ -1,0 +1,35 @@
+.background-image {
+  @apply bg-abstract bg-no-repeat bg-cover fixed h-[100vh] w-[100vw] flex justify-center items-center
+}
+
+.animated-frame {
+  @apply w-[95vw] h-[95vh] bg-transparent relative flex items-center justify-center overflow-hidden
+}
+
+.animated-frame::before {
+  @apply content-[""] absolute h-[300rem] w-[18rem] bg-black -z-10 animate-fillFrame
+}
+
+.animated-frame::after {
+  @apply content-[""] bg-abstract bg-cover absolute inset-[5px]
+}
+
+.frame {
+  @apply w-[95vw] h-[95vh] bg-transparent relative flex items-center justify-center overflow-hidden
+}
+
+.frame::before {
+  @apply content-[""] absolute h-[300rem] w-[130rem] bg-black -z-10
+}
+
+.frame::after {
+  @apply content-[""] bg-abstract bg-cover absolute inset-[5px]
+}
+
+.content {
+  @apply w-[90%] h-[90%] z-10
+}
+
+.header {
+  @apply w-20 h-full absolute right-0 top-0 flex items-end justify-center z-10
+}

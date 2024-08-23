@@ -7,11 +7,18 @@
 @layer base {
   @font-face {
     font-family: "PPTelegraf";
+    font-display: swap;
     src: url("/assets/fonts/PPTelegraf-Regular.otf") format("opentype");
   }
 
   @font-face {
     font-family: 'Breathing';
+    font-display: swap;
     src: url("/assets/fonts/Breathing.ttf");
   }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }

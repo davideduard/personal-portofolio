@@ -1,0 +1,35 @@
+.navigation {
+  @apply -rotate-90 flex flex-row gap-12 pl-96 text-xl font-telegraf
+}
+
+.nav-item {
+  @apply text-black relative text-opacity-30 opacity-100
+}
+
+.about {
+  @apply animate-fade animation-delay-[3200ms] opacity-0
+}
+
+.projects {
+  @apply animate-fade animation-delay-[3350ms] opacity-0
+}
+
+.contact {
+  @apply animate-fade animation-delay-[3500ms] opacity-0
+}
+
+.nav-item:hover {
+  @apply cursor-pointer text-black
+}
+
+.nav-item:hover::after {
+  @apply w-full
+}
+
+.nav-item::after {
+  @apply content-[''] bg-black h-0.5 w-0 absolute left-0 -bottom-1 rounded-lg duration-300
+}
+
+.active-route {
+  @apply text-black
+}

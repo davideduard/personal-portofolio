@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-contact-page',
-	template: `
-		<div class="flex items-center justify-center w-full h-[100vh]">
-			<div class="test"></div>
-		</div>
-	`,
+	template: `<app-portfolio-layout>
+		<h1 class="title">Contact</h1>
+	</app-portfolio-layout> `,
 	styleUrls: ['./contact-page.component.scss']
 })
 export class ContactPageComponent {}

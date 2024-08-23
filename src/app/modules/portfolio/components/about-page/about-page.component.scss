@@ -3,27 +3,37 @@
 }
 
 .title {
-  @apply text-7xl font-telegraf opacity-0;
-  animation: fade 0.5s ease-in forwards;
-  animation-delay: 3.4s;
-  cursor: default;
-  user-select: none;
+  @apply text-7xl font-telegraf opacity-0 animate-fade animation-delay-[50ms]
 }
 
 .subtitle {
-  @apply text-xl font-telegraf pl-1
+  @apply text-xl font-telegraf pl-1 opacity-0 animate-fade animation-delay-[50ms]
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  70% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animated {
+  @apply animate-fade
+}
+
+.year {
+  @apply opacity-0 animate-fade animation-delay-[550ms]
+}
+
+.location {
+  @apply opacity-0 animate-fade animation-delay-[850ms]
+}
+
+.quote {
+  @apply opacity-0 animate-fade animation-delay-[1150ms]
+}
+
+.year-animated {
+  @apply opacity-0 animate-fade animation-delay-[3700ms]
+}
+
+.location-animated {
+  @apply opacity-0 animate-fade animation-delay-[4000ms]
+}
+
+.quote-animated {
+  @apply opacity-0 animate-fade animation-delay-[4300ms]
 }

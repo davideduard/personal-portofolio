@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js,ts}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'abstract': "url('/assets/jpeg/Background.jpeg')"
+      },
       screens: {
         'sm': '350px',
 
@@ -11,35 +14,76 @@ module.exports = {
         'lg': '1440px',
       },
       keyframes: {
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden"
+        openDetails: {
+          '0%': {
+            height: 0,
+            visibility: 'hidden'
           },
-          "50%": {
-            width: "100%",
-            visibility: "visible"
-          },
-          "75%": {
-            width: "100%",
-            visibility: "visible"
-          },
-          "100%": {
-            width: "100%",
-            visibility: "visible"
+          '100%': {
+            height: '6rem',
+            visibility: 'shown'
           }
         },
-        blink: {
-          "50%": {
-            borderColor: "transparent"
+        closeDetails: {
+          '0%': {
+            height: '6rem',
+            visibility: 'hidden'
+          },
+          '100%': {
+            height: 0,
+            visibility: 'hidden'
+          }
+        },
+        openArrow:{
+          '0%': {
+            transform: 'rotate(225deg)'
+          },
+          '100%': {
+            transform: 'rotate(315deg)'
+          }
+        },
+        closeArrow: {
+          '0%': {
+            transform: 'rotate(315deg)'
+          },
+          '100%': {
+            transform: 'rotate(225deg)'
+          }
+        },
+        rotate: {
+          "0%": {
+            transform: "rotate(-45deg)"
           },
           "100%": {
-            borderColor: "white"
+            transform: "rotate(245deg)"
+          }
+        },
+        fill: {
+          "0%": {
+            width: '18rem'
+          },
+          "100%": {
+            width: '120rem'
+          }
+        },
+        fade: {
+          "0%": {
+          opacity: "0",
+          transform: "translateY(0.3rem)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
           }
         }
       },
       animation: {
-        typing: "typing 6s steps(100, end) infinite alternate, blink .7s step-end infinite "
+        fade: "fade 0.5s linear forwards 3.3s",
+        fillFrame: "rotate 3s linear forwards, fill 2s linear 3.2s forwards",
+        openArrow: "openArrow 0.15s linear forwards",
+        closeArrow: "closeArrow 0.15s linear forwards",
+        openDetails: "openDetails 0.2s linear forwards",
+        closeDetails: "closeDetails 0.2s linear forwards"
       },
       fontFamily: {
         telegraf: ["PPTelegraf", "sans-serif"],
@@ -47,5 +91,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 }

@@ -1,0 +1,68 @@
+.title {
+  @apply text-7xl font-telegraf opacity-0 animate-fade animation-delay-[50ms]
+}
+
+.subtitle {
+  @apply text-xl font-telegraf pl-1 opacity-0 animate-fade animation-delay-[50ms]
+}
+
+.projects-container {
+  @apply h-[80%] mr-10 mt-20 pt-32 text-xl flex flex-col gap-6
+}
+
+.project {
+  @apply flex flex-col
+}
+
+.project-item {
+  @apply flex items-center gap-2 font-telegraf
+}
+
+.active-project-details {
+  @apply h-36 pt-2 pl-5 text-sm animate-openDetails
+}
+
+.project-details {
+  @apply animate-closeDetails
+  
+}
+
+.arrow {
+  @apply border-l-[3px] border-b-[3px] p-[3px] border-black rotate-[225deg] hover:cursor-pointer animate-closeArrow
+}
+
+.active-arrow {
+  @apply border-l-[3px] border-b-[3px] p-[3px] border-black rotate-[-45deg] hover:cursor-pointer animate-openArrow
+}
+
+.project-title:hover {
+  @apply cursor-default
+}
+
+#trading-companion {
+  @apply opacity-0 animate-fade animation-delay-[550ms]
+}
+
+#interviewr {
+  @apply opacity-0 animate-fade animation-delay-[850ms]
+}
+
+#text-brief {
+  @apply opacity-0 animate-fade animation-delay-[1150ms]
+}
+
+#social-network {
+  @apply opacity-0 animate-fade animation-delay-[1450ms]
+}
+
+#scrapping-bot {
+  @apply opacity-0 animate-fade animation-delay-[1750ms]
+}
+
+#library-app {
+  @apply opacity-0 animate-fade animation-delay-[2050ms]
+}
+
+.skill {
+  @apply flex flex-row gap-10
+}
