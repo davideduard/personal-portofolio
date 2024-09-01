@@ -7,7 +7,7 @@
 }
 
 .projects-container {
-  @apply h-[80%] mr-10 mt-20 pt-32 text-xl flex flex-col gap-6
+  @apply h-[80%] mr-10 mt-20 pt-32 md:text-xl flex flex-col gap-6 sm:text-base
 }
 
 .project {
@@ -15,16 +15,15 @@
 }
 
 .project-item {
-  @apply flex items-center gap-2 font-telegraf
+  @apply flex items-center gap-2 font-telegraf sm:gap-1
 }
 
 .active-project-details {
-  @apply h-36 pt-2 pl-5 text-sm animate-openDetails
+  @apply h-40 pt-2 pl-5 md:text-sm animate-openDetails sm:text-xs
 }
 
 .project-details {
-  @apply animate-closeDetails
-  
+  @apply h-0 opacity-0 pt-2 pl-5 md:text-sm overflow-hidden animate-closeDetails sm:text-xs
 }
 
 .arrow {
@@ -64,5 +63,38 @@
 }
 
 .skill {
-  @apply flex flex-row gap-10
+  @apply flex flex-row items-center md:text-base font-telegraf md:gap-[10rem] md:w-[30rem] sm:text-xs sm:w-[15rem]
+}
+
+.skill-name {
+  @apply w-60
+}
+
+.skill-level {
+  @apply w-44 h-4 border-black border-2 relative overflow-hidden
+}
+
+.skill-level::after {
+  @apply content-[''] w-0 h-4 absolute left-0 top-0 bg-black
+}
+
+.skill-level.animate-fill:after {
+  animation: animate-fillSkill 0.5s linear forwards;
+}
+
+.links-placeholder {
+  @apply md:text-base font-telegraf flex flex-row md:gap-[13rem] mt-3 sm:text-xs sm:gap-[3rem]
+}
+
+.links {
+  @apply md:text-base font-telegraf flex flex-col underline sm:text-xs
+}
+
+@keyframes animate-fillSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--level-width, 100%);
+  }
 }

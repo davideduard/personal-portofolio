@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { projects } from '../../constants/projects';
-import { Project } from '../../types';
+import { Project, Skill } from '../../types';
 
 @Component({
 	selector: 'app-projects-page',
@@ -29,16 +29,30 @@ import { Project } from '../../types';
 							(click)="setSelectedIndex(i)"
 						></div>
 					</div>
-
 					<div
 						[ngClass]="{
 							'project-details': selectedIndex !== i,
 							'active-project-details': selectedIndex === i
 						}"
 					>
-						<div class="skill">
-							<p>Angular</p>
-							<div>test</div>
+						<div *ngFor="let skill of project.skills" class="skill">
+							<p class="skill-name">{{ skill.name }}</p>
+							<div
+								class="skill-level"
+								[style]="'--level-width: ' + skill.level + '%'"
+								[ngClass]="animate ? 'animate-fill' : ''"
+							></div>
+						</div>
+						<div class="links-placeholder">
+							<p>GitHub Links</p>
+							<div class="links">
+								<a
+									[href]="link"
+									target="_blank"
+									*ngFor="let link of project.links"
+									>{{ link }}</a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -49,13 +63,23 @@ import { Project } from '../../types';
 })
 export class ProjectsPageComponent {
 	protected readonly projects: Project[] = projects;
+
 	selectedIndex: number = -1;
+	animate: boolean = false;
 
 	setSelectedIndex(index: number) {
 		if (index === this.selectedIndex) {
 			this.selectedIndex = -1;
+			this.animate = false;
 		} else {
 			this.selectedIndex = index;
+			this.animate = true;
+
+			this.animate = false;
+
+			setTimeout(() => {
+				this.animate = true;
+			}, 50);
 		}
 	}
 }
