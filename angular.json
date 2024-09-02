@@ -53,6 +53,11 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
               "src/assets"
             ],
             "styles": [
@@ -70,8 +75,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"
