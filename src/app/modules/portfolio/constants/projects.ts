@@ -19,8 +19,14 @@ export const projects: Project[] = [
 			}
 		],
 		links: [
-			'https://github.com/davideduard/CSGOEmpire-Trading-Companion-BE',
-			'https://github.com/davideduard/CSGOEmpire-Trading-Companion-WEB'
+			{
+				url: 'https://github.com/davideduard/CSGOEmpire-Trading-Companion-BE',
+				placeholder: 'https://github.com/CSTC-API'
+			},
+			{
+				url: 'https://github.com/davideduard/CSGOEmpire-Trading-Companion-WEB',
+				placeholder: 'https://github.com/CSTC-WEB'
+			}
 		],
 		inProgress: true
 	},
@@ -38,13 +44,19 @@ export const projects: Project[] = [
 			}
 		],
 		links: [
-			'https://github.com/davideduard/interViewR-backend',
-			'https://github.com/davideduard/interViewR-web'
+			{
+				url: 'https://github.com/davideduard/interViewR-backend',
+				placeholder: 'https://github.com/InterViewR-API'
+			},
+			{
+				url: 'https://github.com/davideduard/interViewR-web',
+				placeholder: 'https://github.com/InterViewR-WEB'
+			}
 		]
 	},
 	{
 		id: 'text-brief',
-		title: 'TextBrief - A Summarization Tool for Romanian Language',
+		title: 'TextBrief - A Summarization Tool',
 		skills: [
 			{
 				name: 'Natural Language Processing',
@@ -59,7 +71,12 @@ export const projects: Project[] = [
 				level: 35
 			}
 		],
-		links: ['https://github.com/davideduard/TextBrief']
+		links: [
+			{
+				url: 'https://github.com/davideduard/TextBrief',
+				placeholder: 'https://github.com/TextBrief'
+			}
+		]
 	},
 	{
 		id: 'social-network',
@@ -74,7 +91,12 @@ export const projects: Project[] = [
 				level: 15
 			}
 		],
-		links: ['https://github.com/davideduard/Social-Network']
+		links: [
+			{
+				url: 'https://github.com/davideduard/Social-Network',
+				placeholder: 'https://github.com/Social-Network'
+			}
+		]
 	},
 	{
 		id: 'scrapping-bot',
@@ -85,7 +107,12 @@ export const projects: Project[] = [
 				level: 20
 			}
 		],
-		links: ['https://github.com/davideduard/Scrapping-Bot']
+		links: [
+			{
+				url: 'https://github.com/davideduard/Scrapping-Bot',
+				placeholder: 'https://github.com/Scrapping-Bot'
+			}
+		]
 	},
 	{
 		id: 'library-app',
@@ -96,6 +123,11 @@ export const projects: Project[] = [
 				level: 10
 			}
 		],
-		links: ['https://github.com/davideduard/Gestiunea-unei-biblioteci']
+		links: [
+			{
+				url: 'https://github.com/davideduard/Gestiunea-unei-biblioteci',
+				placeholder: 'https://github.com/Library-App'
+			}
+		]
 	}
 ];

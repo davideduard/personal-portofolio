@@ -1,5 +1,7 @@
 .navigation {
-  @apply -rotate-90 flex flex-row gap-12 pl-96 text-xl font-telegraf
+  @apply -rotate-90 flex flex-row gap-12  font-telegraf;
+
+  @apply md:pl-96 md:text-xl sm:pl-[21rem] sm:text-base
 }
 
 .nav-item {

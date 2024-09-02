@@ -17,21 +17,21 @@ module.exports = {
         openDetails: {
           '0%': {
             height: 0,
-            visibility: 'hidden'
+            opacity: 0
           },
           '100%': {
-            height: '6rem',
-            visibility: 'shown'
+            height: '12rem',
+            opacity: 1
           }
         },
         closeDetails: {
           '0%': {
-            height: '6rem',
-            visibility: 'hidden'
+            height: '12rem',
+            opacity: 1
           },
           '100%': {
             height: 0,
-            visibility: 'hidden'
+            opacity: 0
           }
         },
         openArrow:{
@@ -83,7 +83,7 @@ module.exports = {
         openArrow: "openArrow 0.15s linear forwards",
         closeArrow: "closeArrow 0.15s linear forwards",
         openDetails: "openDetails 0.2s linear forwards",
-        closeDetails: "closeDetails 0.2s linear forwards"
+        closeDetails: "closeDetails 0.2s linear forwards",
       },
       fontFamily: {
         telegraf: ["PPTelegraf", "sans-serif"],

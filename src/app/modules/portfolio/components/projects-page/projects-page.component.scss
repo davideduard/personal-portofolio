@@ -1,13 +1,19 @@
 .title {
-  @apply text-7xl font-telegraf opacity-0 animate-fade animation-delay-[50ms]
+  @apply font-telegraf opacity-0 animate-fade animation-delay-[50ms];
+
+  @apply md:text-7xl md:font-medium sm:text-5xl
 }
 
 .subtitle {
-  @apply text-xl font-telegraf pl-1 opacity-0 animate-fade animation-delay-[50ms]
+  @apply font-telegraf pl-1 opacity-0 animate-fade animation-delay-[50ms];
+
+  @apply md:text-xl sm:text-sm
 }
 
 .projects-container {
-  @apply h-[80%] mr-10 mt-20 pt-32 md:text-xl flex flex-col gap-6 sm:text-base
+  @apply h-[80%] mr-10 mt-20 pt-5 flex flex-col gap-6;
+
+  @apply md:text-xl sm:text-base;
 }
 
 .project {
@@ -15,27 +21,88 @@
 }
 
 .project-item {
-  @apply flex items-center gap-2 font-telegraf sm:gap-1
+  @apply flex items-center font-telegraf;
+
+  @apply md:gap-2 sm:gap-1;
 }
 
-.active-project-details {
-  @apply h-40 pt-2 pl-5 md:text-sm animate-openDetails sm:text-xs
-}
+.project-title {
+  //@apply whitespace-nowrap overflow-hidden text-clip;
 
-.project-details {
-  @apply h-0 opacity-0 pt-2 pl-5 md:text-sm overflow-hidden animate-closeDetails sm:text-xs
-}
-
-.arrow {
-  @apply border-l-[3px] border-b-[3px] p-[3px] border-black rotate-[225deg] hover:cursor-pointer animate-closeArrow
-}
-
-.active-arrow {
-  @apply border-l-[3px] border-b-[3px] p-[3px] border-black rotate-[-45deg] hover:cursor-pointer animate-openArrow
+  @apply md:text-xl sm:text-base
 }
 
 .project-title:hover {
-  @apply cursor-default
+  @apply cursor-pointer;
+  animation: animate-scroll 2s linear forwards;
+}
+
+.active-project-details {
+  @apply flex flex-col h-40 pt-2 pl-5 animate-openDetails;
+
+  @apply md:text-xl md:gap-[0.1rem] sm:text-xs sm:gap-3;
+}
+
+.project-details {
+  @apply h-0 opacity-0 pt-2 pl-5 overflow-hidden animate-closeDetails;
+
+  @apply md:text-sm sm:text-xs;
+}
+
+.arrow {
+  @apply border-black rotate-[225deg] hover:cursor-pointer animate-closeArrow z-20;
+
+  @apply md:border-l-[3px] md:border-b-[3px] md:p-[3px] sm:border-l-[2px] sm:border-b-[2px] sm:p-[2px];
+}
+
+.active-arrow {
+  @apply border-black rotate-[-45deg] hover:cursor-pointer animate-openArrow z-20;
+
+  @apply md:border-l-[3px] md:border-b-[3px] md:p-[3px] sm:border-l-[2px] sm:border-b-[2px] sm:p-[2px];
+}
+
+.skill {
+  @apply flex font-telegraf w-full;
+
+  @apply md:text-base md:items-center md:flex-row md:gap-40 sm:text-xs sm:items-start sm:flex-col;
+}
+
+.skill-name {
+  @apply whitespace-nowrap p-0 m-0;
+
+  @apply md:w-44 sm:w-20;
+}
+
+.skill-level {
+  @apply h-4 border-black border-2 relative overflow-hidden;
+
+  @apply md:w-52 md:ml-0 sm:w-56 sm:ml-[0.1rem];
+}
+
+.skill-level::after {
+  @apply content-[''] w-0 h-4 absolute left-0 top-0 bg-black
+}
+
+.skill-level.animate-fill:after {
+  animation: animate-fillSkill 0.5s linear forwards;
+}
+
+.links-placeholder {
+  @apply font-telegraf flex flex-row mt-3;
+
+  @apply md:text-base md:flex-row md:gap-40 sm:flex-col sm:text-xs;
+}
+
+.links-title {
+  @apply whitespace-nowrap;
+
+  @apply md:w-44 sm:w-20;
+}
+
+.links {
+  @apply font-telegraf flex flex-col underline whitespace-nowrap;
+
+  @apply md:text-base md:pl-0 sm:text-xs sm:pl-[0.1rem];
 }
 
 #trading-companion {
@@ -60,34 +127,6 @@
 
 #library-app {
   @apply opacity-0 animate-fade animation-delay-[2050ms]
-}
-
-.skill {
-  @apply flex flex-row items-center md:text-base font-telegraf md:gap-[10rem] md:w-[30rem] sm:text-xs sm:w-[15rem]
-}
-
-.skill-name {
-  @apply w-60
-}
-
-.skill-level {
-  @apply w-44 h-4 border-black border-2 relative overflow-hidden
-}
-
-.skill-level::after {
-  @apply content-[''] w-0 h-4 absolute left-0 top-0 bg-black
-}
-
-.skill-level.animate-fill:after {
-  animation: animate-fillSkill 0.5s linear forwards;
-}
-
-.links-placeholder {
-  @apply md:text-base font-telegraf flex flex-row md:gap-[13rem] mt-3 sm:text-xs sm:gap-[3rem]
-}
-
-.links {
-  @apply md:text-base font-telegraf flex flex-col underline sm:text-xs
 }
 
 @keyframes animate-fillSkill {

@@ -1,5 +1,7 @@
 .title {
-  @apply text-7xl font-telegraf opacity-0 animate-fade animation-delay-[50ms]
+  @apply font-telegraf opacity-0 animate-fade animation-delay-[50ms];
+
+  @apply md:text-7xl md:font-medium sm:text-5xl
 }
 
 .subtitle {

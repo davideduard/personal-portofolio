@@ -15,11 +15,8 @@ import { Project, Skill } from '../../types';
 					[attr.id]="project.id"
 				>
 					<div class="project-item">
-						<p class="project-title">
+						<p class="project-title" (click)="setSelectedIndex(i)">
 							{{ project.title }}
-							<span *ngIf="project.inProgress" class="opacity-30"
-								>(currently developing)</span
-							>
 						</p>
 						<div
 							[ngClass]="{
@@ -44,14 +41,14 @@ import { Project, Skill } from '../../types';
 							></div>
 						</div>
 						<div class="links-placeholder">
-							<p>GitHub Links</p>
+							<p class="links-title">GitHub Links</p>
 							<div class="links">
 								<a
-									[href]="link"
+									[href]="link.url"
 									target="_blank"
 									*ngFor="let link of project.links"
-									>{{ link }}</a
-								>
+									>{{ link.placeholder }}
+								</a>
 							</div>
 						</div>
 					</div>
