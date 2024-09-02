@@ -60,10 +60,12 @@ module.exports = {
         },
         fill: {
           "0%": {
-            width: '18rem'
+            width: '18rem',
+            backfaceVisibility: 'hidden'
           },
           "100%": {
-            width: '120rem'
+            width: '120rem',
+            backfaceVisibility: 'hidden'
           }
         },
         fade: {

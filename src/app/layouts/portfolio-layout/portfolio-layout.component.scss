@@ -1,9 +1,9 @@
 .background-image {
-  @apply bg-abstract bg-no-repeat bg-cover fixed h-[100vh] w-[100vw] flex justify-center items-center grayscale
+  @apply bg-abstract bg-no-repeat bg-cover fixed h-svh w-[100vw] flex justify-center items-center grayscale
 }
 
 .animated-frame {
-  @apply w-[95vw] h-[95vh] bg-transparent relative flex items-center justify-center overflow-hidden
+  @apply w-[95vw] h-[95svh] bg-transparent relative flex items-center justify-center overflow-hidden
 }
 
 .animated-frame::before {
@@ -15,7 +15,7 @@
 }
 
 .frame {
-  @apply w-[95vw] h-[95vh] bg-transparent relative flex items-center justify-center overflow-hidden
+  @apply w-[95vw] h-[95svh] bg-transparent relative flex items-center justify-center overflow-hidden
 }
 
 .frame::before {
